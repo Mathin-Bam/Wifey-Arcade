@@ -1,26 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-hk-pink-soft: #FFDDF4;
+  --color-hk-card: #FFF5FA;
+  --color-hk-red: #ED1C24;
+  --color-hk-gold-glow: #FFD700;
+  --color-hk-text: #4F3B3B;
+
+  --ease-hk: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  
+  --radius-hk: 1.5rem;
+  
+  --font-sans: 'Quicksand', sans-serif;
+  
+  --animate-hk-pulse: hk-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes hk-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
+    50% { opacity: 0.8; transform: scale(1.02); box-shadow: 0 0 30px rgba(255, 215, 0, 0.6); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #FFDDF4;
+  --foreground: #4F3B3B;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar to match theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFDDF4;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFF5FA;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffb8e8;
 }
