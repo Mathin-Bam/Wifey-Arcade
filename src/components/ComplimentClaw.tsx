@@ -115,7 +115,7 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
                   particleCount: 50,
                   spread: 60,
                   origin: { y: 0.6 },
-                  colors: ['#FFDDF4', '#ED1C24', '#FFD700', '#FFF5FA']
+                  colors: ['#5097A4', '#F26B5E', '#FFD166', '#E5F0F2']
                 });
                 
                 const randomComp = ALL_COMPLIMENTS[Math.floor(Math.random() * ALL_COMPLIMENTS.length)];
@@ -146,7 +146,7 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
       particleCount: 100,
       spread: 80,
       origin: { y: 0.5 },
-      colors: ['#FFDDF4', '#ED1C24', '#FFD700']
+      colors: ['#5097A4', '#F26B5E', '#FFD166']
     });
     
     if (onWin) onWin(250); // Award points!
@@ -178,21 +178,21 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
 
   return (
     <>
-      <div className="flex flex-col bg-[var(--color-hk-card)] p-4 md:p-6 rounded-3xl shadow-sm border-2 border-white relative h-[400px] sm:h-[500px]">
+      <div className="flex flex-col bg-[var(--color-theme-card)] p-4 md:p-6 rounded-3xl shadow-sm border-2 border-white relative h-[400px] sm:h-[500px]">
         {/* Header & Album Button */}
         <div className="flex justify-between items-center z-10 mb-2">
-          <h2 className="text-[var(--color-hk-text)] font-bold uppercase tracking-widest text-sm">
+          <h2 className="text-[var(--color-theme-text)] font-bold uppercase tracking-widest text-sm">
             Compliment Claw
           </h2>
           <div className="flex gap-2 items-center">
             {isLoaded && (
-              <span className="text-[10px] md:text-xs font-bold bg-[var(--color-hk-pink-soft)] px-2.5 py-1.5 rounded-xl text-[var(--color-hk-text)] border border-white">
+              <span className="text-[10px] md:text-xs font-bold bg-[var(--color-theme-primary)] px-2.5 py-1.5 rounded-xl text-[var(--color-theme-text)] border border-white">
                 💖 {Math.max(0, 2 - dailyClaimsCount)}/2 Tokens Left
               </span>
             )}
             <button 
               onClick={() => setIsAlbumOpen(true)}
-              className="flex items-center gap-2 px-3 py-1.5 bg-white text-[var(--color-hk-red)] font-bold rounded-xl shadow-sm hover:shadow transition-all text-xs border border-gray-100"
+              className="flex items-center gap-2 px-3 py-1.5 bg-white text-[var(--color-theme-accent)] font-bold rounded-xl shadow-sm hover:shadow transition-all text-xs border border-gray-100"
             >
               <BookHeart size={16} />
               ALBUM
@@ -201,7 +201,7 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
         </div>
         
         {/* Arcade Cabinet Screen */}
-        <div className="flex-1 w-full bg-[var(--color-hk-pink-soft)] rounded-2xl border-4 border-white overflow-hidden relative shadow-inner mb-4">
+        <div className="flex-1 w-full bg-[var(--color-theme-primary)] rounded-2xl border-4 border-white overflow-hidden relative shadow-inner mb-4">
           
           {/* Glass glare effect */}
           <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none z-20" />
@@ -222,15 +222,15 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
               <motion.div
                 initial={{ scale: 0.8, y: 20 }}
                 animate={{ scale: 1, y: 0 }}
-                className="bg-white p-6 rounded-2xl border-4 border-[var(--color-hk-pink-soft)] shadow-xl flex flex-col items-center max-w-[85%]"
+                className="bg-white p-6 rounded-2xl border-4 border-[var(--color-theme-primary)] shadow-xl flex flex-col items-center max-w-[85%]"
               >
-                <div className="w-16 h-16 rounded-full bg-[var(--color-hk-pink-soft)] flex items-center justify-center text-[var(--color-hk-red)] mb-4 animate-bounce">
+                <div className="w-16 h-16 rounded-full bg-[var(--color-theme-primary)] flex items-center justify-center text-[var(--color-theme-accent)] mb-4 animate-bounce">
                   <Lock size={32} />
                 </div>
-                <h3 className="text-lg font-bold text-[var(--color-hk-text)] uppercase tracking-wider mb-2">
+                <h3 className="text-lg font-bold text-[var(--color-theme-text)] uppercase tracking-wider mb-2">
                   NO TOKENS LEFT!
                 </h3>
-                <p className="text-sm font-medium text-[var(--color-hk-text)]/80 leading-snug">
+                <p className="text-sm font-medium text-[var(--color-theme-text)]/80 leading-snug">
                   You've claimed your 2 compliments today! Come back tomorrow for more sweet surprises. 💕
                 </p>
               </motion.div>
@@ -259,7 +259,7 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
             
             {/* Claw Head */}
             <motion.div 
-              className="relative text-[var(--color-hk-red)] drop-shadow-[0_0_8px_var(--color-hk-gold-glow)]"
+              className="relative text-[var(--color-theme-accent)] drop-shadow-[0_0_8px_var(--color-theme-glow)]"
               animate={{ 
                 scale: isDropping && clawY > 0 ? 1.1 : 1
               }}
@@ -317,7 +317,7 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
                 exit={{ opacity: 0, scale: 0.9 }}
                 className="absolute inset-0 z-30 flex items-center justify-center p-4 bg-black/30 backdrop-blur-sm"
               >
-                <div className="bg-white p-6 rounded-3xl shadow-2xl border-4 border-[var(--color-hk-pink-soft)] text-center max-w-[85%] relative flex flex-col items-center">
+                <div className="bg-white p-6 rounded-3xl shadow-2xl border-4 border-[var(--color-theme-primary)] text-center max-w-[85%] relative flex flex-col items-center">
                   
                   {/* Close / Discard Button */}
                   {!isSaved && (
@@ -329,11 +329,11 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
                     </button>
                   )}
                   
-                  <h3 className="text-[var(--color-hk-red)] font-bold text-xs uppercase tracking-wider mb-2 flex items-center gap-1">
+                  <h3 className="text-[var(--color-theme-accent)] font-bold text-xs uppercase tracking-wider mb-2 flex items-center gap-1">
                     <Heart size={14} className="fill-current animate-pulse" /> Compliment Revealed!
                   </h3>
                   
-                  <p className="text-[var(--color-hk-text)] font-semibold text-lg leading-snug py-2 px-1 italic">
+                  <p className="text-[var(--color-theme-text)] font-semibold text-lg leading-snug py-2 px-1 italic">
                     "{activeCompliment}"
                   </p>
                   
@@ -353,7 +353,7 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={handleSaveToAlbum}
-                        className="w-full flex items-center justify-center gap-2 py-3 px-6 bg-[var(--color-hk-red)] hover:bg-[var(--color-hk-red)]/90 text-white font-bold rounded-2xl shadow-md transition-all border-b-4 border-red-800"
+                        className="w-full flex items-center justify-center gap-2 py-3 px-6 bg-[var(--color-theme-accent)] hover:bg-[var(--color-theme-accent)]/90 text-white font-bold rounded-2xl shadow-md transition-all border-b-4 border-[#D45246]"
                       >
                         <BookHeart size={18} />
                         SAVE TO ALBUM (+250 Pts)
@@ -383,14 +383,14 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
             <button 
               onClick={() => moveClaw("left")}
               disabled={isDropping || !!activeCompliment || !canClaimToday}
-              className="w-14 h-14 bg-gray-100 rounded-xl shadow-[0_4px_0_#d1d5db] active:shadow-[0_0px_0_#d1d5db] active:translate-y-1 transition-all flex items-center justify-center disabled:opacity-40 text-[var(--color-hk-text)] border border-gray-200"
+              className="w-14 h-14 bg-gray-100 rounded-xl shadow-[0_4px_0_#d1d5db] active:shadow-[0_0px_0_#d1d5db] active:translate-y-1 transition-all flex items-center justify-center disabled:opacity-40 text-[var(--color-theme-text)] border border-gray-200"
             >
               <ArrowLeft size={24} strokeWidth={3} />
             </button>
             <button 
               onClick={() => moveClaw("right")}
               disabled={isDropping || !!activeCompliment || !canClaimToday}
-              className="w-14 h-14 bg-gray-100 rounded-xl shadow-[0_4px_0_#d1d5db] active:shadow-[0_0px_0_#d1d5db] active:translate-y-1 transition-all flex items-center justify-center disabled:opacity-40 text-[var(--color-hk-text)] border border-gray-200"
+              className="w-14 h-14 bg-gray-100 rounded-xl shadow-[0_4px_0_#d1d5db] active:shadow-[0_0px_0_#d1d5db] active:translate-y-1 transition-all flex items-center justify-center disabled:opacity-40 text-[var(--color-theme-text)] border border-gray-200"
             >
               <ArrowRight size={24} strokeWidth={3} />
             </button>
@@ -400,7 +400,7 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
           <button 
             onClick={handleDrop}
             disabled={isDropping || !!activeCompliment || !canClaimToday}
-            className="w-20 h-20 bg-[var(--color-hk-red)] rounded-full shadow-[0_6px_0_#b91c1c] active:shadow-[0_0px_0_#b91c1c] active:translate-y-[6px] transition-all flex items-center justify-center text-white disabled:opacity-40 border-4 border-white"
+            className="w-20 h-20 bg-[var(--color-theme-accent)] rounded-full shadow-[0_6px_0_#D45246] active:shadow-[0_0px_0_#D45246] active:translate-y-[6px] transition-all flex items-center justify-center text-white disabled:opacity-40 border-4 border-white"
           >
             <span className="font-bold text-lg tracking-wider drop-shadow-md">
               {!canClaimToday ? "LOCKED" : "DROP"}

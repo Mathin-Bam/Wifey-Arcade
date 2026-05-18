@@ -49,19 +49,19 @@ export default function StoreScreen({
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="absolute inset-0 flex flex-col p-6 md:p-12 overflow-y-auto bg-[var(--color-hk-pink-soft)]"
+      className="absolute inset-0 flex flex-col p-6 md:p-12 overflow-y-auto bg-[var(--color-theme-primary)]"
     >
       {/* Header */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex justify-between items-center mb-8 sticky top-0 z-50 bg-[var(--color-hk-pink-soft)]/90 backdrop-blur-md py-4 -mt-4 rounded-b-2xl"
+        className="flex justify-between items-center mb-8 sticky top-0 z-50 bg-[var(--color-theme-primary)]/90 backdrop-blur-md py-4 -mt-4 rounded-b-2xl"
       >
         <motion.button
           whileHover={{ scale: 1.1, x: -5 }}
           whileTap={{ scale: 0.9 }}
           onClick={onBack}
-          className="p-3 bg-white text-[var(--color-hk-text)] rounded-full shadow hover:shadow-md transition-shadow"
+          className="p-3 bg-white text-[var(--color-theme-text)] rounded-full shadow hover:shadow-md transition-shadow"
         >
           <ArrowLeft size={24} />
         </motion.button>
@@ -72,10 +72,10 @@ export default function StoreScreen({
       </motion.div>
 
       <div className="mb-8 text-center">
-        <h1 className="text-3xl md:text-5xl font-bold text-[var(--color-hk-text)] tracking-tight">
+        <h1 className="text-3xl md:text-5xl font-bold text-[var(--color-theme-text)] tracking-tight">
           Redemption Bow-Tique
         </h1>
-        <p className="text-[var(--color-hk-text)]/70 mt-2 text-lg">
+        <p className="text-[var(--color-theme-text)]/70 mt-2 text-lg">
           Spend your Wifey Points on exclusive rewards!
         </p>
       </div>

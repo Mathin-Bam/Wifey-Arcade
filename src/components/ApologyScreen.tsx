@@ -41,7 +41,7 @@ export default function ApologyScreen({ onComplete }: { onComplete: () => void }
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="absolute inset-0 flex flex-col items-center justify-center bg-[var(--color-hk-pink-soft)] overflow-hidden"
+      className="absolute inset-0 flex flex-col items-center justify-center bg-[var(--color-theme-primary)] overflow-hidden"
     >
       {/* Kinetic Background */}
       <div className="absolute inset-0 pointer-events-none opacity-40">
@@ -77,7 +77,7 @@ export default function ApologyScreen({ onComplete }: { onComplete: () => void }
         animate="visible"
         className="z-10 text-center px-4 max-w-2xl"
       >
-        <h1 className="text-3xl md:text-5xl font-bold text-[var(--color-hk-text)] leading-tight tracking-tight flex flex-wrap justify-center gap-y-2">
+        <h1 className="text-3xl md:text-5xl font-bold text-[var(--color-theme-text)] leading-tight tracking-tight flex flex-wrap justify-center gap-y-2">
           {words.map((word, wordIndex) => (
             <span key={wordIndex} className="inline-block whitespace-nowrap">
               {word.split("").map((char, charIndex) => (
@@ -107,10 +107,10 @@ export default function ApologyScreen({ onComplete }: { onComplete: () => void }
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onComplete}
-            className="z-10 mt-12 px-8 py-4 bg-white text-[var(--color-hk-text)] font-bold rounded-[var(--radius-hk)] shadow-lg hover:shadow-xl transition-shadow text-xl tracking-wider animate-[hk-pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite] relative overflow-hidden group"
+            className="z-10 mt-12 px-8 py-4 bg-white text-[var(--color-theme-text)] font-bold rounded-[var(--radius-hk)] shadow-lg hover:shadow-xl transition-shadow text-xl tracking-wider animate-[hk-pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite] relative overflow-hidden group"
           >
             PRESS START
-            <div className="absolute inset-0 bg-[var(--color-hk-gold-glow)] opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
+            <div className="absolute inset-0 bg-[var(--color-theme-glow)] opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
           </motion.button>
         )}
       </AnimatePresence>

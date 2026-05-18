@@ -29,19 +29,19 @@ export default function ComplimentAlbum({
             exit={{ y: 20, scale: 0.9, opacity: 0 }}
             transition={{ type: "spring", bounce: 0.3 }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-[var(--color-hk-card)] w-full max-w-4xl max-h-[85vh] rounded-3xl shadow-2xl border-4 border-white flex flex-col overflow-hidden"
+            className="bg-[var(--color-theme-card)] w-full max-w-4xl max-h-[85vh] rounded-3xl shadow-2xl border-4 border-white flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 bg-[var(--color-hk-pink-soft)] border-b-4 border-white">
+            <div className="flex items-center justify-between p-6 bg-[var(--color-theme-primary)] border-b-4 border-white">
               <div className="flex items-center gap-3">
-                <BookHeart size={28} className="text-[var(--color-hk-red)]" />
-                <h2 className="text-xl md:text-2xl font-bold text-[var(--color-hk-text)] tracking-tight">
+                <BookHeart size={28} className="text-[var(--color-theme-accent)]" />
+                <h2 className="text-xl md:text-2xl font-bold text-[var(--color-theme-text)] tracking-tight">
                   My Compliment Album
                 </h2>
               </div>
               <button
                 onClick={onClose}
-                className="p-2 bg-white rounded-full text-[var(--color-hk-text)] hover:bg-[var(--color-hk-red)] hover:text-white transition-colors"
+                className="p-2 bg-white rounded-full text-[var(--color-theme-text)] hover:bg-[var(--color-theme-accent)] hover:text-white transition-colors"
               >
                 <X size={24} />
               </button>
@@ -52,10 +52,10 @@ export default function ComplimentAlbum({
               {unlockedCompliments.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full text-center opacity-60">
                   <BookHeart size={64} className="mb-4 text-gray-400" />
-                  <p className="text-xl font-medium text-[var(--color-hk-text)]">
+                  <p className="text-xl font-medium text-[var(--color-theme-text)]">
                     Your album is empty!
                   </p>
-                  <p className="mt-2 text-[var(--color-hk-text)]">
+                  <p className="mt-2 text-[var(--color-theme-text)]">
                     Play the Compliment Claw to collect sweet stickers!
                   </p>
                 </div>
@@ -67,17 +67,17 @@ export default function ComplimentAlbum({
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: i * 0.05 }}
-                      className="bg-white p-4 rounded-xl shadow-md border-2 border-[var(--color-hk-pink-soft)] relative transform hover:-translate-y-1 hover:shadow-lg transition-all"
+                      className="bg-white p-4 rounded-xl shadow-md border-2 border-[var(--color-theme-primary)] relative transform hover:-translate-y-1 hover:shadow-lg transition-all"
                     >
                       {/* Cute tape effect */}
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-pink-100/80 rotate-[-3deg] backdrop-blur-sm" />
                       
-                      <p className="text-[var(--color-hk-text)] font-medium text-center mt-3 text-lg leading-snug">
+                      <p className="text-[var(--color-theme-text)] font-medium text-center mt-3 text-lg leading-snug">
                         "{compliment}"
                       </p>
                       
                       <div className="absolute bottom-2 right-2 opacity-20">
-                        <BookHeart size={16} className="text-[var(--color-hk-red)]" />
+                        <BookHeart size={16} className="text-[var(--color-theme-accent)]" />
                       </div>
                     </motion.div>
                   ))}
@@ -86,7 +86,7 @@ export default function ComplimentAlbum({
             </div>
             
             {/* Footer */}
-            <div className="p-4 bg-[var(--color-hk-pink-soft)]/30 border-t-2 border-white text-center text-sm font-bold text-[var(--color-hk-text)]/70">
+            <div className="p-4 bg-[var(--color-theme-primary)]/30 border-t-2 border-white text-center text-sm font-bold text-[var(--color-theme-text)]/70">
               Collected: {unlockedCompliments.length}
             </div>
           </motion.div>

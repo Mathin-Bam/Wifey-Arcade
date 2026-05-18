@@ -21,8 +21,8 @@ export default function WifeyPointsCounter({ points }: { points: number }) {
   );
 
   return (
-    <div className="flex flex-col items-center bg-[var(--color-hk-card)] p-6 rounded-3xl shadow-sm border-2 border-white">
-      <h2 className="text-[var(--color-hk-text)] font-bold uppercase tracking-widest text-sm mb-4">
+    <div className="flex flex-col items-center bg-[var(--color-theme-card)] p-6 rounded-3xl shadow-sm border-2 border-white">
+      <h2 className="text-[var(--color-theme-text)] font-bold uppercase tracking-widest text-sm mb-4">
         Wifey Points
       </h2>
       

@@ -53,15 +53,15 @@ export default function PrizeCard({
       
       {/* Prize Details */}
       <div className="flex flex-col items-center gap-1 mt-2">
-        <h3 className="font-bold text-[var(--color-hk-text)] font-sans text-lg">{prize.title}</h3>
-        <p className="text-[var(--color-hk-red)] font-mono font-bold">{prize.cost.toLocaleString()} Pts</p>
+        <h3 className="font-bold text-[var(--color-theme-text)] font-sans text-lg">{prize.title}</h3>
+        <p className="text-[var(--color-theme-accent)] font-mono font-bold">{prize.cost.toLocaleString()} Pts</p>
       </div>
 
       {/* Claim Button */}
       <div className="mt-2 w-full px-2">
         {canAfford ? (
           <ConfettiRipple onClaim={() => onClaim(prize.cost)}>
-            <div className="w-full py-3 bg-[var(--color-hk-card)] border-2 border-[var(--color-hk-pink-soft)] text-[var(--color-hk-text)] font-bold text-center rounded-xl hover:bg-[var(--color-hk-pink-soft)] transition-colors">
+            <div className="w-full py-3 bg-[var(--color-theme-card)] border-2 border-[var(--color-theme-primary)] text-[var(--color-theme-text)] font-bold text-center rounded-xl hover:bg-[var(--color-theme-primary)] transition-colors">
               CLAIM
             </div>
           </ConfettiRipple>
