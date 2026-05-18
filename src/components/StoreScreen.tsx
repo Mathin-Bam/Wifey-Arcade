@@ -49,13 +49,13 @@ export default function StoreScreen({
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="absolute inset-0 flex flex-col p-6 md:p-12 overflow-y-auto bg-[var(--color-hk-pink-soft)]"
+      className="absolute inset-0 flex flex-col p-6 md:p-12 overflow-y-auto bg-[var(--color-hk-blue-soft)]"
     >
       {/* Header */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex justify-between items-center mb-8 sticky top-0 z-50 bg-[var(--color-hk-pink-soft)]/90 backdrop-blur-md py-4 -mt-4 rounded-b-2xl"
+        className="flex justify-between items-center mb-8 sticky top-0 z-50 bg-[var(--color-hk-blue-soft)]/90 backdrop-blur-md py-4 -mt-4 rounded-b-2xl"
       >
         <motion.button
           whileHover={{ scale: 1.1, x: -5 }}
