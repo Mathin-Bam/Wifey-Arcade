@@ -53,7 +53,7 @@ export default function DashboardScreen({
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="absolute inset-0 flex flex-col p-6 md:p-12 overflow-y-auto no-scrollbar bg-[var(--color-hk-pink-soft)]"
+      className="absolute inset-0 flex flex-col p-4 sm:p-6 md:p-12 overflow-y-auto no-scrollbar bg-[var(--color-hk-pink-soft)]"
     >
       {/* Header */}
       <motion.div variants={itemVariants} className="flex justify-between items-center mb-8">

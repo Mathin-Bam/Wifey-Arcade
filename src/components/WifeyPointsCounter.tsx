@@ -31,7 +31,7 @@ export default function WifeyPointsCounter({ points }: { points: number }) {
         {[0, 1, 2, 3, 4].map((index) => (
           <div 
             key={index}
-            className="relative bg-[#333] text-white text-4xl md:text-5xl font-mono font-bold w-12 md:w-16 h-16 md:h-20 flex items-center justify-center rounded-lg shadow-inner overflow-hidden border-b-2 border-[#111]"
+            className="relative bg-[#333] text-white text-3xl sm:text-4xl md:text-5xl font-mono font-bold w-10 sm:w-12 md:w-16 h-14 sm:h-16 md:h-20 flex items-center justify-center rounded-lg shadow-inner overflow-hidden border-b-2 border-[#111]"
           >
             {/* Split line */}
             <div className="absolute top-1/2 left-0 w-full h-[2px] bg-black/50 z-10" />

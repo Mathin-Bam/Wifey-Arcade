@@ -35,7 +35,7 @@ export default function ComplimentAlbum({
             <div className="flex items-center justify-between p-6 bg-[var(--color-hk-pink-soft)] border-b-4 border-white">
               <div className="flex items-center gap-3">
                 <BookHeart size={28} className="text-[var(--color-hk-red)]" />
-                <h2 className="text-2xl font-bold text-[var(--color-hk-text)] tracking-tight">
+                <h2 className="text-xl md:text-2xl font-bold text-[var(--color-hk-text)] tracking-tight">
                   My Compliment Album
                 </h2>
               </div>

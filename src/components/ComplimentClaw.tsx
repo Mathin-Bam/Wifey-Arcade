@@ -178,7 +178,7 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
 
   return (
     <>
-      <div className="flex flex-col bg-[var(--color-hk-card)] p-4 md:p-6 rounded-3xl shadow-sm border-2 border-white relative h-[500px]">
+      <div className="flex flex-col bg-[var(--color-hk-card)] p-4 md:p-6 rounded-3xl shadow-sm border-2 border-white relative h-[400px] sm:h-[500px]">
         {/* Header & Album Button */}
         <div className="flex justify-between items-center z-10 mb-2">
           <h2 className="text-[var(--color-hk-text)] font-bold uppercase tracking-widest text-sm">
