@@ -186,7 +186,7 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
           </h2>
           <div className="flex gap-2 items-center">
             {isLoaded && (
-              <span className="text-[10px] md:text-xs font-bold bg-[var(--color-hk-blue-soft)] px-2.5 py-1.5 rounded-xl text-[var(--color-hk-text)] border border-white">
+              <span className="text-[10px] md:text-xs font-bold bg-[var(--color-hk-pink-soft)] px-2.5 py-1.5 rounded-xl text-[var(--color-hk-text)] border border-white">
                 💖 {Math.max(0, 2 - dailyClaimsCount)}/2 Tokens Left
               </span>
             )}
@@ -201,7 +201,7 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
         </div>
         
         {/* Arcade Cabinet Screen */}
-        <div className="flex-1 w-full bg-[var(--color-hk-blue-soft)] rounded-2xl border-4 border-white overflow-hidden relative shadow-inner mb-4">
+        <div className="flex-1 w-full bg-[var(--color-hk-pink-soft)] rounded-2xl border-4 border-white overflow-hidden relative shadow-inner mb-4">
           
           {/* Glass glare effect */}
           <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none z-20" />
@@ -222,9 +222,9 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
               <motion.div
                 initial={{ scale: 0.8, y: 20 }}
                 animate={{ scale: 1, y: 0 }}
-                className="bg-white p-6 rounded-2xl border-4 border-[var(--color-hk-blue-soft)] shadow-xl flex flex-col items-center max-w-[85%]"
+                className="bg-white p-6 rounded-2xl border-4 border-[var(--color-hk-pink-soft)] shadow-xl flex flex-col items-center max-w-[85%]"
               >
-                <div className="w-16 h-16 rounded-full bg-[var(--color-hk-blue-soft)] flex items-center justify-center text-[var(--color-hk-red)] mb-4 animate-bounce">
+                <div className="w-16 h-16 rounded-full bg-[var(--color-hk-pink-soft)] flex items-center justify-center text-[var(--color-hk-red)] mb-4 animate-bounce">
                   <Lock size={32} />
                 </div>
                 <h3 className="text-lg font-bold text-[var(--color-hk-text)] uppercase tracking-wider mb-2">
@@ -317,7 +317,7 @@ export default function ComplimentClaw({ onWin }: { onWin?: (pts: number) => voi
                 exit={{ opacity: 0, scale: 0.9 }}
                 className="absolute inset-0 z-30 flex items-center justify-center p-4 bg-black/30 backdrop-blur-sm"
               >
-                <div className="bg-white p-6 rounded-3xl shadow-2xl border-4 border-[var(--color-hk-blue-soft)] text-center max-w-[85%] relative flex flex-col items-center">
+                <div className="bg-white p-6 rounded-3xl shadow-2xl border-4 border-[var(--color-hk-pink-soft)] text-center max-w-[85%] relative flex flex-col items-center">
                   
                   {/* Close / Discard Button */}
                   {!isSaved && (

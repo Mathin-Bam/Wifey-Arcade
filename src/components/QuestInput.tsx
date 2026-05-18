@@ -43,7 +43,7 @@ export default function QuestInput() {
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           placeholder="Enter secret code..."
-          className="w-full relative z-10 bg-white border-2 border-transparent focus:border-[var(--color-hk-blue-soft)] outline-none rounded-full py-3 px-6 text-[var(--color-hk-text)] font-medium placeholder:text-gray-300 transition-colors shadow-inner"
+          className="w-full relative z-10 bg-white border-2 border-transparent focus:border-[var(--color-hk-pink-soft)] outline-none rounded-full py-3 px-6 text-[var(--color-hk-text)] font-medium placeholder:text-gray-300 transition-colors shadow-inner"
         />
         
         <motion.button

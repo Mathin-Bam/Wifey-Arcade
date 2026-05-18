@@ -41,7 +41,7 @@ export default function ApologyScreen({ onComplete }: { onComplete: () => void }
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="absolute inset-0 flex flex-col items-center justify-center bg-[var(--color-hk-blue-soft)] overflow-hidden"
+      className="absolute inset-0 flex flex-col items-center justify-center bg-[var(--color-hk-pink-soft)] overflow-hidden"
     >
       {/* Kinetic Background */}
       <div className="absolute inset-0 pointer-events-none opacity-40">

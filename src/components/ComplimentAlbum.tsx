@@ -32,7 +32,7 @@ export default function ComplimentAlbum({
             className="bg-[var(--color-hk-card)] w-full max-w-4xl max-h-[85vh] rounded-3xl shadow-2xl border-4 border-white flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 bg-[var(--color-hk-blue-soft)] border-b-4 border-white">
+            <div className="flex items-center justify-between p-6 bg-[var(--color-hk-pink-soft)] border-b-4 border-white">
               <div className="flex items-center gap-3">
                 <BookHeart size={28} className="text-[var(--color-hk-red)]" />
                 <h2 className="text-xl md:text-2xl font-bold text-[var(--color-hk-text)] tracking-tight">
@@ -67,7 +67,7 @@ export default function ComplimentAlbum({
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: i * 0.05 }}
-                      className="bg-white p-4 rounded-xl shadow-md border-2 border-[var(--color-hk-blue-soft)] relative transform hover:-translate-y-1 hover:shadow-lg transition-all"
+                      className="bg-white p-4 rounded-xl shadow-md border-2 border-[var(--color-hk-pink-soft)] relative transform hover:-translate-y-1 hover:shadow-lg transition-all"
                     >
                       {/* Cute tape effect */}
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-pink-100/80 rotate-[-3deg] backdrop-blur-sm" />
@@ -86,7 +86,7 @@ export default function ComplimentAlbum({
             </div>
             
             {/* Footer */}
-            <div className="p-4 bg-[var(--color-hk-blue-soft)]/30 border-t-2 border-white text-center text-sm font-bold text-[var(--color-hk-text)]/70">
+            <div className="p-4 bg-[var(--color-hk-pink-soft)]/30 border-t-2 border-white text-center text-sm font-bold text-[var(--color-hk-text)]/70">
               Collected: {unlockedCompliments.length}
             </div>
           </motion.div>

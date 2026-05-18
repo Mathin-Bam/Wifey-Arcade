@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-hk-blue-soft: #DDEEFE;
-  --color-hk-card: #F4F9FF;
+  --color-hk-pink-soft: #FFDDF4;
+  --color-hk-card: #FFF5FA;
   --color-hk-red: #ED1C24;
   --color-hk-gold-glow: #FFD700;
-  --color-hk-text: #3B454F;
+  --color-hk-text: #4F3B3B;
 
   --ease-hk: cubic-bezier(0.645, 0.045, 0.355, 1.000);
   
@@ -29,8 +29,8 @@
 }
 
 :root {
-  --background: #DDEEFE;
-  --foreground: #3B454F;
+  --background: #FFDDF4;
+  --foreground: #4F3B3B;
 }
 
 body {
@@ -47,12 +47,12 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #DDEEFE;
+  background: #FFDDF4;
 }
 ::-webkit-scrollbar-thumb {
-  background: #F4F9FF;
+  background: #FFF5FA;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #BBE2FA;
+  background: #ffb8e8;
 }

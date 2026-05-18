@@ -61,7 +61,7 @@ export default function PrizeCard({
       <div className="mt-2 w-full px-2">
         {canAfford ? (
           <ConfettiRipple onClaim={() => onClaim(prize.cost)}>
-            <div className="w-full py-3 bg-[var(--color-hk-card)] border-2 border-[var(--color-hk-blue-soft)] text-[var(--color-hk-text)] font-bold text-center rounded-xl hover:bg-[var(--color-hk-blue-soft)] transition-colors">
+            <div className="w-full py-3 bg-[var(--color-hk-card)] border-2 border-[var(--color-hk-pink-soft)] text-[var(--color-hk-text)] font-bold text-center rounded-xl hover:bg-[var(--color-hk-pink-soft)] transition-colors">
               CLAIM
             </div>
           </ConfettiRipple>
